@@ -1,20 +1,18 @@
 # Site settings
 title: Waris Ali
 description: >-
-  He's writing in Bahasa about web technology and experience as a journal 
-  for documentation things that he learned, meet him <a href="https://github.com/piharpi" target="_blank" rel="noopener">@github</a>.
+  He's writing in Pakistan about web technology and experience as a journal for documenting things that he learned, meet him <a href="https://github.com/warisali2" target="_blank" rel="noopener">@github</a>.
 lang: en-US
 timezone: Asia/Karachi
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
-repo: https://github.com/piharpi/mahendrata.now.sh
+repo: https://github.com/warisali2/warisali.github.io
 mode: dark # default theme "dark" | "light"
 
 # Profile settings
 author:
   name: Waris Ali
   bio: >-
-    The minimalist Jekyll theme, light and dark mode support, for running a personal site and blog, 
-    meet Klisé theme at <a href="https://github.com/piharpi/jekyll-klise" target="_blank" rel="noopener">@github</a>.
+    Hi, I am a Backend Web Developer @ <a href="https://pakwheels.com" target="_blank" rel="noopener">PakWheels</a>.<br/> I write about what I know and break down complex concepts in accessable and intuitive way.
   username: warisali2
   email: m.warisali2@gmail.com
   avatar: /assets/img/avatar.jpg
@@ -73,6 +71,7 @@ exclude:
   - README.md
   - node_modules
   - CODE_OF_CONDUCT.md
+  - notes.md
 
 # Plugins
 plugins:

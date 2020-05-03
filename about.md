@@ -1,16 +1,16 @@
 ---
-title: Colophon
+title: About Me
 permalink: /about/
 layout: page
-excerpt: Hello peeps, I'm student of computer science from Banyuwangi, living in Jogjakarta. This blog for documentation about my programming journey, running on jekyll, hosting on netlify and using my own simple theme.
+excerpt: Hi, I am a Backend Web Developer @ <a href="https://pakwheels.com" target="_blank" rel="noopener">PakWheels</a>.<br/> I write about what I know and break down complex concepts in accessable and intuitive way.
 comments: false
 ---
 
-He's a student from Banyuwangi, living in Jogjakarta. the blog for documentation about his programming 🎒 journey, running on jekyll, hosting on [now.sh](http://now.sh) and using his own theme, he name it <a href="https://github.com/piharpi/jekyll-klise" target="_blank" rel="noopener">klisé</a>, he also loves to learning web technology; but he often forgot, that a reason why him doing the writing.
+Hi, I am a Backend Web Developer @ <a href="https://pakwheels.com" target="_blank" rel="noopener">PakWheels</a>.<br/> I write about what I know and break down complex concepts in accessable and intuitive way.
 
-If you have a question about him or else, just send a letter to him.
+If you have a question about me or else, just send a letter to me.
 
-You can [report](http://github.com/piharpi/jekyll-klise/issues/new) if there is an broken link(s) or somethings else.
+You can [report](http://github.com/warisali2/warisali2.github.io/issues/new) if there is an broken link(s) or somethings else.
 
 ##### may u needs ✨
 
