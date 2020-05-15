@@ -21,7 +21,7 @@ author:
 url: "https://warisali.tech"
 baseurl:
 permalink: /:title/
-google_analytics:
+google_analytics: UA-166763516-1
 fb_appid:
 
 # Collection setting
@@ -72,6 +72,7 @@ exclude:
   - node_modules
   - CODE_OF_CONDUCT.md
   - notes.md
+  - .idea
 
 # Plugins
 plugins:
