@@ -1,0 +1,2 @@
+[context.staging]
+command = "jekyll build --config _config.yml,_staging.config.yml"
