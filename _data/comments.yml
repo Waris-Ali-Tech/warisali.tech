@@ -1,0 +1,5 @@
+--- !ruby/object:Comments
+comments:
+  ! '':
+    ! '': &1 !ruby/object:Comment {}
+comment: *1
