@@ -1,0 +1,10 @@
+---
+Test Post:
+  6c335d7b-06f1-4d5a-a956-4a2b229d88f9:
+    post: Test Post
+    name: Tester
+    comment: very nice
+    timestamp: '2020-07-27 22:25:00'
+    email: tester@test.com
+    replies: []
+    id: 6c335d7b-06f1-4d5a-a956-4a2b229d88f9
