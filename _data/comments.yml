@@ -8,3 +8,11 @@ which-career-should-you-pursue-in-it:
     email: tester@test.com
     replies: []
     id: 4ffcfec6-2b5f-4e0b-8f67-9259691f17e8
+  92649cc5-853c-47bb-9fae-933397293bd1:
+    post: which-career-should-you-pursue-in-it
+    name: Tester
+    comment: very nice
+    timestamp: '2020-07-27 22:25:00'
+    email: tester@test.com
+    replies: []
+    id: 92649cc5-853c-47bb-9fae-933397293bd1
