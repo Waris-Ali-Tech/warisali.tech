@@ -51,6 +51,25 @@ body[data-theme="dark"] {
         color: $dark-text-link-blue;
       }
     }
+
+    .comment-form {
+      input,
+      textarea {
+      background-color: $dark-black;
+      color: $dark-text-base-color;
+      border-bottom: 2px solid $dark-smoke;
+      }
+
+      button[type="submit"] {
+        color: $dark-text-link-blue-active;
+        background-color: $dark-light;
+
+        &:active {
+          color: $dark-text-link-blue;
+          background-color: $dark-black;
+        }
+      }
+    }
   }
 
   // Syntax
@@ -234,5 +253,10 @@ body[data-theme="dark"] {
     .solution:hover {
       color: $dark-text-link-blue-active;
     }
+  }
+
+  // Required * on form
+  .required-star {
+    color: $dark-text-link-blue;
   }
 }
