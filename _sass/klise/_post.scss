@@ -186,74 +186,83 @@
   h6 {
     @include relative-font-size(0.875);
   }
+}
 
-  .comment-form {
-    input,
-    textarea {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 3px;
-      margin-bottom: 5px;
-      border: none;
-      border-bottom: 1px solid $smoke;
-    }
+.new-comment {
+  h2 {
+    margin-bottom: 20px;
+  }
+}
 
-    button[type="submit"] {
-      background-color: $smoke;
-      float: right;
-      padding: 15px;
-      margin-top: 10px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+.comment-form {
+  input,
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 3px;
+    margin-bottom: 5px;
+    border: none;
+    border-bottom: 1px solid $smoke;
+  }
 
-      &:active {
-        background-color: $gray;
-        color: $light;
-      }
-    }
+  button[type="submit"] {
+    background-color: $smoke;
+    float: right;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 
-    label {
-      padding-top: 20px;
-    }
-
-    h2 {
-      margin-bottom: 20px;
+    &:active {
+      background-color: $gray;
+      color: $light;
     }
   }
 
-  .post-comments {
-    margin-top: 80px;
+  label {
+    padding-top: 20px;
+    display: block;
+  }
+}
 
-    h2 {
-      margin-bottom: 30px
-    }
+.comment-box {
+  margin-bottom: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 
-    div.comments-container {
-      margin-bottom: 50px;
+.post-comments {
+  margin-top: 80px;
 
-      div {
-        .date {
-          font-size: $small-font-size;
-          display: block;
-        }
+  h2 {
+    margin-bottom: 30px
+  }
 
-        .comment {
-          margin-top: 5px;
-          margin-bottom: 3px;
-        }
+  div.comments-container {
+    margin-bottom: 50px;
 
-        a.reply {
-          font-size: $small-font-size;
-          cursor: pointer;
-        }
+    div {
+      .date {
+        font-size: $small-font-size;
+        display: block;
+      }
 
-        &.reply {
-          margin-top: 10px;
-          margin-left: 20px;
-          padding-left: 30px;
-          border-left: 1px solid $smoke;
-        }
+      .comment {
+        margin-top: 5px;
+        margin-bottom: 3px;
+      }
+
+      a.reply {
+        font-size: $small-font-size;
+        cursor: pointer;
+      }
+
+      &.reply {
+        margin-top: 10px;
+        margin-left: 20px;
+        padding-left: 30px;
+        border-left: 1px solid $smoke;
       }
     }
   }
