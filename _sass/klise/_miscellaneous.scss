@@ -32,3 +32,9 @@
 .required-star {
   color: $text-link-blue;
 }
+
+.dot:after {
+  content: "\2022";
+  padding-left: 7px;
+  padding-right: 7px;
+}
