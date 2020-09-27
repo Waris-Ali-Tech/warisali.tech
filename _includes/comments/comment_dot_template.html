@@ -1,0 +1,6 @@
+<div {{? it.is_a_replay }} class="reply" {{?}} id="{{= it.id }}">
+    <b>{{= it.name }}</b>{{? it.email }}<span class="dot"></span><span>{{= it.email }}</span>{{?}}
+    <i class="date">{{= it.timestamp }}</i>
+    <p class="comment">{{= it.comment }}</p>
+    <a class="reply">Reply</a>
+</div>

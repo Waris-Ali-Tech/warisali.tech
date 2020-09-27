@@ -205,9 +205,12 @@
     border-bottom: 1px solid $smoke;
   }
 
-  button[type="submit"] {
-    background-color: $smoke;
+  .buttons {
     float: right;
+  }
+
+  button[type="button"] {
+    background-color: $smoke;
     padding: 15px;
     margin-top: 10px;
     border: none;
@@ -218,6 +221,14 @@
       background-color: $gray;
       color: $light;
     }
+
+    &:disabled {
+      background-color: $smoke;
+    }
+  }
+
+  .cancel {
+    margin-right: 5px;
   }
 
   label {
@@ -239,7 +250,7 @@
     margin-bottom: 30px
   }
 
-  div.comments-container {
+  div.thread {
     margin-bottom: 50px;
 
     div {

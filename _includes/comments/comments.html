@@ -1,0 +1,22 @@
+<section class="new-comment">
+    <h2>Write a Comment</h2>
+    {% include comments/comment_form.html %}
+</section>
+
+<section class="post-comments">
+    <h2>Comments</h2>
+    {% for comment_hash in site.data.comments[page.slug] %}
+        {% assign comment = comment_hash[1] %}
+        {% include comments/thread.html comment=comment %}
+    {% endfor %}
+</section>
+
+<template id="comment-form">
+    <div class="comment-box reply">
+        {% include comments/comment_form.html for_reply=true %}
+    </div>
+</template>
+
+<template id="comment">
+    {% include comments/comment_dot_template.html %}
+</template>

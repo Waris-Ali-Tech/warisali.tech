@@ -1,0 +1,22 @@
+<form class="comment-form">
+    <input type="hidden" name="post" value="{{ page.slug }}"/>
+    {% if site.comments.branch %}
+    <input type="hidden" name="branch" value="{{ site.comments.branch }}"/>
+    {% endif %}
+
+    <label for="name">Name <span class="required-star">*</span></label>
+    <input type="text" id="name" name="name" required="required"/>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email"/>
+
+    <label for="comment">Comment <span class="required-star">*</span></label>
+    <textarea name="comment" id="comment" required="required"></textarea>
+
+    <div class="buttons">
+        {% if include.for_reply %}
+        <button type="button" class="cancel" onclick="remove_comment_form(this)">Cancel</button>
+        {% endif %}
+        <button type="button" class="submit" onclick="post_comment('{{ site.comments.api_point }}', this)">Comment</button>
+    </div>
+</form>

@@ -1,0 +1,13 @@
+<div class="thread">
+    <div id="{{ comment.id }}">
+        {% include comments/comment.html comment=comment %}
+    </div>
+    {% for reply in comment.replies %}
+        {% for reply_comment_hash in reply %}
+            {% assign reply_comment = reply_comment_hash[1] %}
+                <div class="reply" id="{{ reply_comment.id }}">
+                    {% include comments/comment.html comment=reply_comment %}
+                </div>
+        {% endfor %}
+    {% endfor %}
+</div>

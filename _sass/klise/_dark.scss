@@ -60,13 +60,18 @@ body[data-theme="dark"] {
       border-bottom: 2px solid $dark-smoke;
       }
 
-      button[type="submit"] {
+      button[type="button"] {
         color: $dark-text-link-blue-active;
         background-color: $dark-light;
 
         &:active {
           color: $dark-text-link-blue;
           background-color: $dark-black;
+        }
+
+        &:disabled {
+          color: $dark-text-link-blue-active;
+          background-color: $dark-light;
         }
       }
     }
@@ -258,5 +263,10 @@ body[data-theme="dark"] {
   // Required * on form
   .required-star {
     color: $dark-text-link-blue;
+  }
+
+  .loader {
+    border: 2px solid $gray;
+    border-top: 2px solid $dark-text-link-blue;
   }
 }

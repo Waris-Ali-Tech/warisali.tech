@@ -81,4 +81,4 @@ plugins:
   - jekyll-postfiles
 
 comments:
-  branch: master
+  api_point: 'https://comments.warisali.tech'
