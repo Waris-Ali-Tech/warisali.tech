@@ -3,7 +3,7 @@ function show_comment_form(el) {
     let comment = el.parentElement
     let comment_id = comment.getAttribute('id')
     let form = document.querySelector('template[id="comment-form"]').content.cloneNode(true)
-    form.querySelector('.comment-form').appendChild(reply_id_input_element(comment_id))
+    form.querySelector('.comment-form').appendChild(parent_id_input_element(comment_id))
     thread.appendChild(form)
     thread.querySelector('form').scrollIntoView({behavior: 'smooth'})
 }
@@ -13,28 +13,56 @@ function remove_comment_form(el) {
     form.remove()
 }
 
-function reply_id_input_element(reply_id) {
+function parent_id_input_element(parent_id) {
     let input = document.createElement('input')
     input.setAttribute('type', 'hidden')
-    input.setAttribute('name', 'reply_id')
-    input.setAttribute('value', reply_id)
+    input.setAttribute('name', 'parent_id')
+    input.setAttribute('value', parent_id)
     return input
 }
 
 function post_comment(api_point, el) {
     show_loading(el)
-    let data = extract_form_data()
-    send_post_request(api_point, data,function() { handle_api_response(el, this) } )
+    let data = extract_form_data(el)
+    send_post_request(api_point, data, function () {
+        handle_api_response(el, data, this)
+    })
 }
 
-function handle_api_response(el, xhr) {
+function handle_api_response(el, data, xhr) {
     if (xhr.readyState === 4) {
         hide_loading(el)
         if (xhr.status === 200) {
+            append_comment(xhr.response)
+            if (data.parent_id)
+                remove_comment_form(el)
         } else {
             alert('Error! Could not post comment.')
         }
     }
+}
+
+function append_comment(data) {
+    let thread = get_thread(data)
+    let comment = create_comment(data)
+    thread.appendChild(comment);
+}
+
+function get_thread(data) {
+    let thread;
+    if (data.parent_id)
+        thread = document.querySelector(`div[id=${data.parent_id}]`)
+    else
+        thread = document.querySelector('section[class="post-comments"]')
+    return thread
+}
+
+function create_comment(data) {
+    let comment_template = document.querySelector('template[id="comment"]')
+    comment_template = doT.template(comment_template.innerHTML)
+    el = document.createElement('template')
+    el.innerHTML = comment_template(data).trim()
+    return el.content.firstChild
 }
 
 function show_loading(btn) {
@@ -59,29 +87,38 @@ function prepare_form_data(data) {
     return JSON.stringify(data)
 }
 
-function extract_form_data() {
+function extract_form_data(el) {
+    let form = el.closest('form')
+    let branch, email, parent_id
 
-    let branch, email, reply_to
-
-    let branch_el = document.querySelector('.comment-form input[name="branch"]')
+    let branch_el = form.querySelector('.comment-form input[name="branch"]')
     if (branch_el !== null)
         branch = branch_el.value
 
-    let email_el = document.querySelector('.comment-form input[name="email"]')
+    let email_el = form.querySelector('.comment-form input[name="email"]')
     if (email_el !== null)
         email = email_el.value
 
 
-    let reply_to_el = document.querySelector('.comment-form input[name="reply_to"]')
-    if (reply_to_el !== null)
-        reply_to = reply_to_el.value
+    let parent_id_el = form.querySelector('.comment-form input[name="parent_id"]')
+    if (parent_id_el !== null)
+        parent_id = parent_id_el.value
 
     return {
-        post: document.querySelector('.comment-form input[name="post"]').value,
+        post: form.querySelector('.comment-form input[name="post"]').value,
         branch: branch,
-        name: document.querySelector('.comment-form input[name="name"]').value,
+        name: form.querySelector('.comment-form input[name="name"]').value,
         email: email,
-        comment: document.querySelector('.comment-form textarea[name="comment"]').value,
-        reply_to: reply_to,
+        timestamp: new Date().getTime(),
+        comment: form.querySelector('.comment-form textarea[name="comment"]').value,
+        parent_id: parent_id,
     }
+}
+
+function format_date(utc_timestamp) {
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"
+    ];
+    let date = new Date(utc_timestamp)
+    return `${date.getDate()} ${monthNames[date.getMonth()]} ${date.getFullYear()}`
 }
