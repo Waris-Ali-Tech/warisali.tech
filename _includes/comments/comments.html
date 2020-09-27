@@ -3,13 +3,16 @@
     {% include comments/comment_form.html %}
 </section>
 
+{% assign comments = site.data.comments[page.slug] %}
+{% if comments.size > 0 %}
 <section class="post-comments">
     <h2>Comments</h2>
-    {% for comment_hash in site.data.comments[page.slug] %}
+    {% for comment_hash in comments %}
         {% assign comment = comment_hash[1] %}
         {% include comments/thread.html comment=comment %}
     {% endfor %}
 </section>
+{% endif %}
 
 <template id="comment-form">
     <div class="comment-box reply">
