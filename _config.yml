@@ -73,6 +73,7 @@ exclude:
   - CODE_OF_CONDUCT.md
   - notes.md
   - .idea
+  - Rakefile
 
 plugins:
   - jekyll-feed
