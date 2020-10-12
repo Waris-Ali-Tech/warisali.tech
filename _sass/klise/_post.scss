@@ -90,6 +90,7 @@
   a {
     color: $text-link-blue;
     text-decoration: none;
+
     &[target="_blank"]::after {
       content: " \2197";
       font-size: $small-font-size;
@@ -184,6 +185,97 @@
 
   h6 {
     @include relative-font-size(0.875);
+  }
+}
+
+.new-comment {
+  h2 {
+    margin-bottom: 20px;
+  }
+}
+
+.comment-form {
+  input,
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 3px;
+    margin-bottom: 5px;
+    border: none;
+    border-bottom: 1px solid $smoke;
+  }
+
+  .buttons {
+    float: right;
+  }
+
+  button[type="button"] {
+    background-color: $smoke;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:active {
+      background-color: $gray;
+      color: $light;
+    }
+
+    &:disabled {
+      background-color: $smoke;
+    }
+  }
+
+  .cancel {
+    margin-right: 5px;
+  }
+
+  label {
+    padding-top: 20px;
+    display: block;
+  }
+}
+
+.comment-box {
+  margin-bottom: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.post-comments {
+  margin-top: 80px;
+
+  h2 {
+    margin-bottom: 30px
+  }
+
+  div.thread {
+    margin-bottom: 50px;
+
+    div {
+      .date {
+        font-size: $small-font-size;
+        display: block;
+      }
+
+      .comment {
+        margin-top: 5px;
+        margin-bottom: 3px;
+      }
+
+      a.reply {
+        font-size: $small-font-size;
+        cursor: pointer;
+      }
+
+      &.reply {
+        margin-top: 10px;
+        margin-left: 20px;
+        padding-left: 30px;
+        border-left: 1px solid $smoke;
+      }
+    }
   }
 }
 

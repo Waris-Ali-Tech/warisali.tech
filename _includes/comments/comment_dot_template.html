@@ -1,0 +1,20 @@
+{% raw %}
+
+{{? it.parent_id }}
+<div class="reply" id="{{= it.parent_id }}">
+{{??}}
+<div class="thread">
+<div id="{{= it.id }}">
+{{?}}
+    <b>{{= it.name }}</b>{{? it.email }}<span class="dot"></span><span>{{= it.email }}</span>{{?}}
+    <i class="date">{{= it.timestamp }}</i>
+    <p class="comment">{{= it.comment }}</p>
+    <a class="reply" onclick="show_comment_form(this)">Reply</a>
+{{? it.parent_id }}
+</div>
+{{??}}
+</div>
+</div>
+{{?}}
+
+{% endraw %}

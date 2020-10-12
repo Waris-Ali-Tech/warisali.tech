@@ -54,7 +54,7 @@ layout: compress
         </div>
       </article>
       {% if page.comments %}
-        {% include comments.html%}
+        {% include comments/comments.html%}
       {% endif %}
 
     </main>
@@ -67,6 +67,8 @@ layout: compress
   </div>
 
   {% include footer.html %}
+  <script type="text/javascript" src="/assets/js/doT.min.js" defer="defer"></script>
+  <script type="text/javascript" src="/assets/js/comments.js" defer="defer"></script>
 
 </body>
 
