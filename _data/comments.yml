@@ -6,5 +6,13 @@ which-career-should-you-pursue-in-it:
     comment: Test comment 2 2 4
     timestamp: 12 Oct 2020
     email: m.warisali2@gmail.com
-    replies: []
+    replies:
+    - post: which-career-should-you-pursue-in-it
+      name: 'yo '
+      comment: boi boi
+      timestamp: 12 Oct 2020
+      email: ''
+      replies: []
+      id: 4b565214-d194-460b-aa31-36227ddc6a9d
+      parent_id: 6202c718-2df3-48a4-8a7a-6300f6be9a22
     id: 6202c718-2df3-48a4-8a7a-6300f6be9a22
