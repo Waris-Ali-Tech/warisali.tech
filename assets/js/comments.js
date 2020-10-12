@@ -33,7 +33,7 @@ function handle_api_response(el, data, xhr) {
     if (xhr.readyState === 4) {
         hide_loading(el)
         if (xhr.status === 200) {
-            let comment = JSON.parse(xhr.response)
+            let comment = JSON.parse(xhr.response).comment
             append_comment(comment)
             if (data.parent_id)
                 remove_comment_form(el)
