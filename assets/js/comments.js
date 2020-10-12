@@ -110,16 +110,17 @@ function extract_form_data(el) {
         branch: branch,
         name: form.querySelector('.comment-form input[name="name"]').value,
         email: email,
-        timestamp: new Date().getTime(),
+        timestamp: current_date(),
         comment: form.querySelector('.comment-form textarea[name="comment"]').value,
         parent_id: parent_id,
     }
 }
 
-function format_date(utc_timestamp) {
+function current_date()
+{
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
         "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"
     ];
-    let date = new Date(utc_timestamp)
+    let date = new Date()
     return `${date.getDate()} ${monthNames[date.getMonth()]} ${date.getFullYear()}`
 }
