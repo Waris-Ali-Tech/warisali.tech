@@ -1,4 +1,4 @@
 <b>{{ comment.name }}</b>{% if comment.email %}<span class="dot"></span><span>{{ comment.email }}</span>{% endif %}
-<i class="date">{{ comment.timestamp | date_to_string }}</i>
+<i class="date">{{ comment.timestamp }}</i>
 <p class="comment">{{ comment.comment }}</p>
 <a class="reply" onclick="show_comment_form(this)">Reply</a>
