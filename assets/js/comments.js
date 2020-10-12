@@ -52,7 +52,7 @@ function append_comment(data) {
 function get_thread(data) {
     let thread;
     if (data.parent_id)
-        thread = document.querySelector(`div[id=${data.parent_id}]`)
+        thread = document.querySelector(`div[id="${data.parent_id}"]`)
     else
         thread = document.querySelector('section[class="post-comments"]')
     return thread
