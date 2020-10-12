@@ -1,6 +1,6 @@
 ---
 date: 2019-07-21
-updated: 2020-10-12
+modified: 2020-10-12
 title: 'Which Career Should You Pursue in IT?'
 template: post
 thumbnail: '../thumbnails/writing.png'
