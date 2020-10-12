@@ -1,5 +1,6 @@
 ---
 date: 2019-07-21
+updated: 2020-10-12
 title: 'Which Career Should You Pursue in IT?'
 template: post
 thumbnail: '../thumbnails/writing.png'
@@ -18,9 +19,7 @@ there in the technologies realm. I liked making computer do things. Whenever I g
 internet and made it. But after some time, I started to feel like I was not becoming master in some field. I was like jack
 of all trades but the master of none. 
 
-So I started reading a lot of articles on How to choose a field in Computer Science. I wanted a field that allowed me to create new interesting things but still had a 
-scientific touch to it. So, I finally choose to pursue mastery in Machine Learning field 
-because in this field I don't only have to learn different kinds tools, there's maths and science too.
+So I started reading a lot of articles on How to choose a field in Computer Science. I wanted a field that allowed me to create new interesting things which would help people and solve their problems. I tried Machine Learning, but it was too mathematical for me. So, I finally choose to pursue mastery in Web Development and Cloud Architecture field.
 
 So I am writing this article to help those who are don't know what field to pursue their careers in, or just starting out
 in Computer Science in general.
