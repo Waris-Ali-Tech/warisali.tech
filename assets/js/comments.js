@@ -47,6 +47,7 @@ function append_comment(data) {
     let thread = get_thread(data)
     let comment = create_comment(data)
     thread.appendChild(comment);
+    thread.lastChild.scrollIntoView({ behavior: 'smooth', block: 'center' })
 }
 
 function get_thread(data) {
