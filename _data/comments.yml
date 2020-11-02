@@ -11,16 +11,8 @@ which-career-should-you-pursue-in-it:
   1d987d85-1353-4f69-a53b-45e55d8e5202:
     post: which-career-should-you-pursue-in-it
     name: Wajahat Ahmed
-    comment: That's amazing
+    comment: Thats amazing
     timestamp: 16 Oct 2020
     email: bcsf15m056@pucit.edu.pk
-    replies:
-    - post: which-career-should-you-pursue-in-it
-      name: Waris
-      comment: Thanks
-      timestamp: 16 Oct 2020
-      email: contact@warisali.tech
-      parent_id: 1d987d85-1353-4f69-a53b-45e55d8e5202
-      replies: []
-      id: 69e3676f-d5c4-446b-9c69-4be22b92ca4c
+    replies: []
     id: 1d987d85-1353-4f69-a53b-45e55d8e5202
