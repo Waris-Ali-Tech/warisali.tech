@@ -2,3 +2,32 @@
 ---
 
 @import "main";
+
+a.button {
+    background-color: $smoke;
+    padding: 15px 30px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $gray;
+      color: $light;
+    }
+}
+
+body[data-theme="dark"] {
+    a.button {
+        color: $dark-text-link-blue-active;
+        background-color: $dark-light;
+        text-decoration: none;
+
+
+        &:hover {
+        color: $dark-text-link-blue;
+        background-color: $dark-black;
+        }
+    }
+}
